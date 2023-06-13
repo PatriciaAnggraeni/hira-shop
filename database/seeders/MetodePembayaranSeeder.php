@@ -14,12 +14,10 @@ class MetodePembayaranSeeder extends Seeder {
             [
                 'kode_metode_pembayaran' => 'COD021832',
                 'metode' => 'cod'
-            ],
-            [
+            ], [
                 'kode_metode_pembayaran' => 'TFB117218',
                 'metode' => 'transfer bank'
-            ],
-            [
+            ], [
                 'kode_metode_pembayaran' => 'KKD889430',
                 'metode' => 'kartu kredit/debit'
             ],
