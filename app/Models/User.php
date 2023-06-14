@@ -12,13 +12,7 @@ class User extends Authenticatable {
 
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $fillable = [
-        'kode_user',
-        'username',
-        'role',
-        'email',
-        'password',
-    ];
+    protected $guarded = ['user_code', 'role'];
 
     protected $hidden = [
         'password',
@@ -29,7 +23,7 @@ class User extends Authenticatable {
         'email_verified_at' => 'datetime',
     ];
 
-    public function pelanggan() {
+    public function buyer() {
         return $this->hasOne(Pelanggan::class);
     }
 }

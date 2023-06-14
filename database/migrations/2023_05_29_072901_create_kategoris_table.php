@@ -7,15 +7,15 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::create('kategori', function (Blueprint $table) {
+        Schema::create('category', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_kategori')->unique();
-            $table->string('kategori')->nullable();
+            $table->string('category_code')->unique();
+            $table->string('category')->nullable();
             $table->timestamps();
         });
     }
 
     public function down() {
-        Schema::dropIfExists('kategori');
+        Schema::dropIfExists('category');
     }
 };

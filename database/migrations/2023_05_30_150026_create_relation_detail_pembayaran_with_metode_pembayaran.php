@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::table('detail_pembayaran', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_metode_pembayaran')->after('id_pembayaran');
-            $table->foreign('id_metode_pembayaran')->references('id')->on('metode_pembayaran')->onDelete('cascade')->onUpdate('cascade');
+        Schema::table('payment_details', function (Blueprint $table) {
+            $table->unsignedBigInteger('payment_method_id')->after('payment_id');
+            $table->foreign('payment_method_id')->references('id')->on('payment_method')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 };

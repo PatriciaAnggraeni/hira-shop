@@ -7,7 +7,5 @@ use Illuminate\Database\Seeder;
 
 class PembayaranSeeder extends Seeder {
 
-    public function run() {
-
-    }
+    public function run() {}
 }

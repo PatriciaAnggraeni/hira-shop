@@ -9,21 +9,21 @@ class Pesanan extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_pesanan'];
+    protected $guarded = ['order_code'];
 
-    public function pelanggan() {
+    public function buyer() {
         $this->belongsTo(Pelanggan::class);
     }
 
-    public function pengiriman() {
+    public function delivery() {
         return $this->hasOne(Pengiriman::class);
     }
 
-    public function pembayaran() {
+    public function payment() {
         return $this->hasOne(Pembayaran::class);
     }
 
-    public function detail_pesanan() {
+    public function order_details() {
         return $this->hasOne(DetailPesanan::class);
     }
 }

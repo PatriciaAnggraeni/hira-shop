@@ -7,14 +7,15 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::create('status_pesanan', function (Blueprint $table) {
+        Schema::create('order_status', function (Blueprint $table) {
             $table->id();
+            $table->string('order_status_code')->unique();
             $table->string('status')->nullable();
             $table->timestamps();
         });
     }
 
     public function down() {
-        Schema::dropIfExists('status_pesanans');
+        Schema::dropIfExists('order_statuss');
     }
 };

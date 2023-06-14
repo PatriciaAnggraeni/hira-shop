@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::table('detail_pengiriman', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_status_pengiriman')->after('id_metode_pengiriman');
-            $table->foreign('id_status_pengiriman')->references('id')->on('status_pengiriman')->onDelete('cascade')->onUpdate('cascade');
+        Schema::table('delivery_details', function (Blueprint $table) {
+            $table->unsignedBigInteger('delivery_status_id')->after('delivery_method_id');
+            $table->foreign('delivery_status_id')->references('id')->on('delivery_status')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 };

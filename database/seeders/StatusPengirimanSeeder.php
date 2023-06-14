@@ -10,7 +10,7 @@ class StatusPengirimanSeeder extends Seeder {
 
     public function run() {
 
-        $status_pengiriman = [
+        $delivery_status = [
             [ 'status' => 'barang dalam proses pengiriman' ],
             [ 'status' => 'barang akan dikirimkan ke tempat penyortiran' ],
             [ 'status' => 'barang akan dikirimkan ke logistik' ],
@@ -25,6 +25,6 @@ class StatusPengirimanSeeder extends Seeder {
             [ 'status' => 'selesai' ]
         ];
 
-        DB::table('status_pengiriman')->insert($status_pengiriman);
+        DB::table('delivery_status')->insert($delivery_status);
     }
 }

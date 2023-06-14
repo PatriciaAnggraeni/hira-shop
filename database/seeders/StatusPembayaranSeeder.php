@@ -10,7 +10,7 @@ class StatusPembayaranSeeder extends Seeder {
 
     public function run() {
 
-        $status_pembayaran = [
+        $payment_status = [
             [ 'status' => 'belum melakukan pembayaran' ],
             [ 'status' => 'sedang menunggu pembayaran' ],
             [ 'status' => 'berhasil melakukan pembayaran' ],
@@ -18,6 +18,6 @@ class StatusPembayaranSeeder extends Seeder {
             [ 'status' => 'selesai' ],
         ];
 
-        DB::table('status_pembayaran')->insert($status_pembayaran);
+        DB::table('payment_status')->insert($payment_status);
     }
 }

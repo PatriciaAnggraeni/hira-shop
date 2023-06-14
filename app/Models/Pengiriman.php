@@ -9,9 +9,9 @@ class Pengiriman extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_pengiriman', 'no_resi'];
+    protected $guarded = ['delivery_code', 'no_resi'];
 
-    public function pesanan() {
+    public function order() {
         return $this->belongsTo(Pesanan::class);
     }
 }

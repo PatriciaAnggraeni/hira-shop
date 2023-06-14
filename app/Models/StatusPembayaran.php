@@ -9,9 +9,9 @@ class StatusPembayaran extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_status_pembayaran', 'status'];
+    protected $guarded = ['payment_status_code', 'status'];
 
-    public function detail_pembayaran() {
+    public function payment_details() {
         return $this->belongsTo(DetailPembayaran::class);
     }
 }

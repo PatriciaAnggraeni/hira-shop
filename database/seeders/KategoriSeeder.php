@@ -10,35 +10,35 @@ class KategoriSeeder extends Seeder {
 
     public function run() {
 
-        $kategori = [
+        $category = [
             [
-                'kode_kategori' => 'RKS1001',
-                'kategori' => 'rekomendasi'
+                'category_code' => 'RKS1001',
+                'category' => 'rekomendasi'
             ], [
-                'kode_kategori' => 'ELT1002',
-                'kategori' => 'elektronik'
+                'category_code' => 'ELT1002',
+                'category' => 'elektronik'
             ], [
-                'kode_kategori' => 'MAM1004',
-                'kategori' => 'makanan & minuman'
+                'category_code' => 'MAM1004',
+                'category' => 'makanan & minuman'
             ], [
-                'kode_kategori' => 'PAK1005',
-                'kategori' => 'perawatan & kecantikan'
+                'category_code' => 'PAK1005',
+                'category' => 'perawatan & kecantikan'
             ], [
-                'kode_kategori' => 'PKN1006',
-                'kategori' => 'pakaian'
+                'category_code' => 'PKN1006',
+                'category' => 'pakaian'
             ], [
-                'kode_kategori' => 'HNP1007',
-                'kategori' => 'handphone $ tablet'
+                'category_code' => 'HNP1007',
+                'category' => 'handphone & tablet'
             ], [
-                'kode_kategori' => 'SPT1008',
-                'kategori' => 'sepatu'
+                'category_code' => 'SPT1008',
+                'category' => 'sepatu'
             ], [
-                'kode_kategori' => 'JTN1009',
-                'kategori' => 'jam tangan'
+                'category_code' => 'JTN1009',
+                'category' => 'jam tangan'
             ],
         ];
 
-        DB::table('kategori')->insert($kategori);
+        DB::table('category')->insert($category);
 
     }
 }

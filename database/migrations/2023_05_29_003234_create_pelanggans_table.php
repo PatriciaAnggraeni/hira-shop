@@ -7,21 +7,21 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::create('pelanggan', function (Blueprint $table) {
+        Schema::create('buyer', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_pelanggan')->unique();
-            $table->string('gambar')->nullable();
-            $table->string('nama')->nullable();
-            $table->enum('jenis_kelamin', ['P', 'L'])->nullable();
-            $table->date('tgl_lahir')->nullable();
+            $table->string('buyer_code')->unique();
+            $table->text('image')->nullable();
+            $table->string('name')->nullable();
+            $table->enum('gender', ['P', 'L'])->nullable();
+            $table->date('birth_date')->nullable();
             $table->string('no_telph', 13)->nullable();
-            $table->longText('alamat')->nullable();
-            $table->longText('deskripsi')->nullable();
+            $table->text('address')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
 
     public function down() {
-        Schema::dropIfExists('pelanggan');
+        Schema::dropIfExists('buyer');
     }
 };

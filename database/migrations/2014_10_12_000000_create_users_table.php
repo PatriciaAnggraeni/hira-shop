@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_user')->unique();
+            $table->string('user_code')->unique();
             $table->string('username');
             $table->enum('role', ['admin', 'pelanggan'])->default('pelanggan');
             $table->string('email')->unique();

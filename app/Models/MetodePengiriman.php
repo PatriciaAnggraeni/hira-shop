@@ -9,9 +9,9 @@ class MetodePengiriman extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_metode_pengiriman', 'metode'];
+    protected $guarded = ['delivery_method_code', 'method'];
 
-    public function detail_pengiriman() {
+    public function delivery_details() {
         return $this->belongsTo(DetailPengiriman::class);
     }
 }

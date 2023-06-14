@@ -9,13 +9,13 @@ class Pelanggan extends Model {
 
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded = ['buyer_code'];
 
-    public function users() {
+    public function user() {
         return $this->belongsTo(User::class);
     }
 
-    public function pelanggan() {
+    public function buyer() {
         return $this->hasMany(Pesanan::class);
     }
 }

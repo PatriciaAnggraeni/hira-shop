@@ -9,17 +9,17 @@ class DetailPembayaran extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_detail_pembayaran'];
+    protected $guarded = ['payment_details_code'];
 
-    public function pembayaran() {
+    public function payment() {
         return $this->belongsTo(Pembayaran::class);
     }
 
-    public function metode_pembayaran() {
+    public function payment_method() {
         return $this->hasOne(MetodePembayaran::class);
     }
 
-    public function status_pembayaran() {
+    public function payment_status() {
         return $this->hasMany(StatusPembayaran::class);
     }
 }

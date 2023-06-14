@@ -9,13 +9,13 @@ class Barang extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_barang'];
+    protected $guarded = ['product_code'];
 
-    public function kategori() {
+    public function category() {
         return $this->belongsTo(Kategori::class);
     }
 
-    public function detail_pesanan() {
+    public function order_details() {
         return $this->hasMany(DetailPesanan::class);
     }
 }

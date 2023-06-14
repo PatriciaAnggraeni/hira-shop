@@ -9,17 +9,17 @@ class DetailPengiriman extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_pengiriman'];
+    protected $guarded = ['delivery_code'];
 
-    public function pengiriman() {
+    public function delivery() {
         return $this->hasOne(Pengiriman::class);
     }
 
-    public function metode_pengiriman() {
+    public function delivery_method() {
         return $this->hasOne(MetodePengiriman::class);
     }
 
-    public function status_pengiriman() {
+    public function delivery_status() {
         return $this->hasMany(StatusPengiriman::class);
     }
 }

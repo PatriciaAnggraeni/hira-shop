@@ -10,20 +10,20 @@ class MetodePembayaranSeeder extends Seeder {
 
     public function run() {
 
-        $metode_pembayaran = [
+        $payment_method = [
             [
-                'kode_metode_pembayaran' => 'COD021832',
-                'metode' => 'cod'
+                'payment_method_code' => 'COD021832',
+                'method' => 'cod'
             ], [
-                'kode_metode_pembayaran' => 'TFB117218',
-                'metode' => 'transfer bank'
+                'payment_method_code' => 'TFB117218',
+                'method' => 'transfer bank'
             ], [
-                'kode_metode_pembayaran' => 'KKD889430',
-                'metode' => 'kartu kredit/debit'
+                'payment_method_code' => 'KKD889430',
+                'method' => 'kartu kredit/debit'
             ],
         ];
 
-        DB::table('metode_pembayaran')->insert($metode_pembayaran);
+        DB::table('payment_method')->insert($payment_method);
 
     }
 }

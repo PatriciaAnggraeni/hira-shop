@@ -10,7 +10,7 @@ class StatusPesananSeeder extends Seeder {
 
     public function run() {
 
-        $status_pesanan = [
+        $order_status = [
             [ 'status' => 'penjual sedang mengatur jadwal pengiriman', ],
             [ 'status' => 'penjual berhasil mengatur jadwal pengiriman', ],
             [ 'status' => 'pesanan dalam proses pengemasan', ],
@@ -20,6 +20,6 @@ class StatusPesananSeeder extends Seeder {
             [ 'status' => 'selesai' ]
         ];
 
-        DB::table('status_pesanan')->insert( $status_pesanan );
+        DB::table('order_status')->insert( $order_status );
     }
 }

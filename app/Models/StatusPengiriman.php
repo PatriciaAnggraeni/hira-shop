@@ -9,9 +9,9 @@ class StatusPengiriman extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_status_pengiriman', 'status'];
+    protected $guarded = ['delivery_status_code', 'status'];
 
-    public function detail_pengiriman() {
+    public function delivery_status() {
         return $this->belongsTo(DetailPesanan::class);
     }
 }

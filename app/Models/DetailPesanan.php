@@ -9,17 +9,17 @@ class DetailPesanan extends Model {
 
     use HasFactory;
 
-    protected $guarded = ['kode_detail_pesanan'];
+    protected $guarded = ['order_details_code'];
 
-    public function pesanan() {
+    public function order() {
         return $this->belongsTo(Pesanan::class);
     }
 
-    public function barang() {
+    public function product() {
         return $this->belongsTo(Barang::class);
     }
 
-    public function status_pesanan() {
+    public function order_status() {
         return $this->hasMany(StatusPesanan::class);
     }
 }

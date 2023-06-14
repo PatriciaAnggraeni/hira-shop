@@ -10,32 +10,32 @@ class MetodePengirimanSeeder extends Seeder {
 
     public function run() {
 
-        $metode_pengiriman = [
+        $delivery_method = [
             [
-                'kode_metode_pengiriman' => 'DLV199119',
-                'metode' => 'Deliverse'
+                'delivery_method_code' => 'DLV199119',
+                'method' => 'Deliverse'
             ], [
-                'kode_metode_pengiriman' => 'JNT101010',
-                'metode' => 'J&T Express'
+                'delivery_method_code' => 'JNT101010',
+                'method' => 'J&T Express'
             ], [
-                'kode_metode_pengiriman' => 'NJA901231',
-                'metode' => 'Ninja Express'
+                'delivery_method_code' => 'NJA901231',
+                'method' => 'Ninja Express'
             ], [
-                'kode_metode_pengiriman' => 'SCH895540',
-                'metode' => 'SiCepat Halu'
+                'delivery_method_code' => 'SCH895540',
+                'method' => 'SiCepat Halu'
             ], [
-                'kode_metode_pengiriman' => 'JNE009322',
-                'metode' => 'J&E Express'
+                'delivery_method_code' => 'JNE009322',
+                'method' => 'J&E Express'
             ], [
-                'kode_metode_pengiriman' => 'RGE743832',
-                'metode' => 'Regular Express'
+                'delivery_method_code' => 'RGE743832',
+                'method' => 'Regular Express'
             ], [
-                'kode_metode_pengiriman' => 'GRE904383',
-                'metode' => 'Grab Express'
+                'delivery_method_code' => 'GRE904383',
+                'method' => 'Grab Express'
             ],
         ];
 
-        DB::table('metode_pengiriman')->insert($metode_pengiriman);
+        DB::table('delivery_method')->insert($delivery_method);
 
     }
 }

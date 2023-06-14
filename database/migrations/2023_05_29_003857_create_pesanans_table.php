@@ -7,16 +7,16 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
 
     public function up() {
-        Schema::create('pesanan', function (Blueprint $table) {
+        Schema::create('order', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_pesanan')->unique();
-            $table->date('tgl_pesan')->unique();
-            $table->unsignedBigInteger('total_harga')->nullable();
+            $table->string('order_code')->unique();
+            $table->date('order_date')->unique();
+            $table->unsignedBigInteger('total_price')->nullable();
             $table->timestamps();
         });
     }
 
     public function down() {
-        Schema::dropIfExists('pesanan');
+        Schema::dropIfExists('order');
     }
 };
