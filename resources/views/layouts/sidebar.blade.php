@@ -35,38 +35,38 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('/admin/buyer')  }}" class="nav-link">
+                    <a href="{{ url('/buyer')  }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-users"></i>
                         <p>Pelanggan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('/admin/product') }}" class="nav-link">
+                    <a href="{{ url('/product') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-gamepad"></i>
                         <p>Barang</p>
                     </a>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('admin/category') }}" class="nav-link">
+                    <a href="{{ url('/category') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-tachometer-alt"></i>
                         <p>Kategori</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('admin/order') }}" class="nav-link">
+                    <a href="{{ url('/order') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-list"></i>
                         <p>Pesanan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('admin/delivery') }}" class="nav-link">
+                    <a href="{{ url('/delivery') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-truck-fast"></i>
                         <p>Pengiriman</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('admin/payment') }}" class="nav-link">
+                    <a href="{{ url('/payment') }}" class="nav-link">
                         <i class="nav-icon fa-solid fa-money-bill"></i>
                         <p>Pembayaran</p>
                     </a>
